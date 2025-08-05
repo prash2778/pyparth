@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Todo List</title>
+    <title>Premium Todo List - Professional Task Management</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1><i class="fas fa-tasks"></i> My Todo List</h1>
-            <button class="theme-toggle" id="themeToggle">
+            <h1><i class="fas fa-crown"></i> Premium Todo</h1>
+            <p class="subtitle">Professional Task Management Suite</p>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
         </header>
@@ -23,11 +25,12 @@
                         <input 
                             type="text" 
                             id="todoInput" 
-                            placeholder="What needs to be done?" 
+                            placeholder="Enter your next professional task..." 
                             maxlength="200"
                             required
+                            aria-label="Task input"
                         >
-                        <button type="submit" class="add-btn">
+                        <button type="submit" class="add-btn" aria-label="Add task">
                             <i class="fas fa-plus"></i>
                             Add Task
                         </button>
@@ -37,14 +40,14 @@
 
             <section class="todo-filters">
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-list"></i> All
+                    <button class="filter-btn active" data-filter="all" aria-label="Show all tasks">
+                        <i class="fas fa-list-ul"></i> All Tasks
                     </button>
-                    <button class="filter-btn" data-filter="active">
+                    <button class="filter-btn" data-filter="active" aria-label="Show active tasks">
                         <i class="fas fa-clock"></i> Active
                     </button>
-                    <button class="filter-btn" data-filter="completed">
-                        <i class="fas fa-check"></i> Completed
+                    <button class="filter-btn" data-filter="completed" aria-label="Show completed tasks">
+                        <i class="fas fa-check-circle"></i> Completed
                     </button>
                 </div>
                 <div class="todo-stats">
@@ -53,22 +56,22 @@
             </section>
 
             <section class="todo-list-section">
-                <ul class="todo-list" id="todoList">
+                <ul class="todo-list" id="todoList" aria-label="Todo list">
                     <!-- Todo items will be dynamically inserted here -->
                 </ul>
                 <div class="empty-state" id="emptyState">
-                    <i class="fas fa-clipboard-list"></i>
+                    <i class="fas fa-clipboard-check"></i>
                     <h3>No tasks yet</h3>
-                    <p>Add your first task above to get started!</p>
+                    <p>Start your productive journey by adding your first task above!</p>
                 </div>
             </section>
 
             <section class="todo-actions">
-                <button class="action-btn" id="clearCompleted">
-                    <i class="fas fa-trash"></i>
+                <button class="action-btn" id="clearCompleted" aria-label="Clear completed tasks">
+                    <i class="fas fa-trash-alt"></i>
                     Clear Completed
                 </button>
-                <button class="action-btn" id="markAllComplete">
+                <button class="action-btn" id="markAllComplete" aria-label="Mark all tasks as complete">
                     <i class="fas fa-check-double"></i>
                     Mark All Complete
                 </button>
@@ -76,7 +79,7 @@
         </main>
 
         <footer class="footer">
-            <p>Double-click to edit tasks • Drag to reorder • Press Enter to save</p>
+            <p><i class="fas fa-info-circle"></i> Double-click to edit • Drag to reorder • Press Enter to save</p>
         </footer>
     </div>
 
